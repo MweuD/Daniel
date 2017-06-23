@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang= "en" >
+<head>
+<meta charset= "utf-8" >
+<meta http-equiv= "X-UA-Compatible"
+content="IE=edge" >
+<meta name= "viewport"
+content="width=device-width, initial-scale=1" >
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title> Bootstrap 101 Template</title>
+<!-- Bootstrap -->
+<link href= "css/bootstrap.min.css"
+rel= "stylesheet" >
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container">
+    <div class="row">
+        <div class="dropdown">
+<button class="dropdown-toggle" data-toggle="dropdown">Dropdown<span class="caret"></span></but>
+<ul class="dropdown-menu">
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+        <div class="col-lg-12">
+            <h3>My Image Gallery</h3>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a class="thumbnail">
+                <p>Image 1</p>
+            <img src="slide/17264690-lovely-couple-on-a-romantic-date-in-a-park.jpg">
+                </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a class="thumbnail">
+                <p>Image 2</p>
+            <img src="slide/2015-08-25-1440522598-1369540-Happypeoplemakemoremoney.jpg">
+                </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a class="thumbnail">
+                <p>Image 3</p>
+            <img src="slide/31488874-Cute-lovely-couple-on-the-beach-Stock-Photo-love.jpg">
+                </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a class="thumbnail">
+                <p>Image 4</p>
+            <img src="slide/508441417.jpg">
+                </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a class="thumbnail">
+                <p>Image 1</p>
+            <img src="slide/17264690-lovely-couple-on-a-romantic-date-in-a-park.jpg">
+                </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a class="thumbnail">
+                <p>Image 2</p>
+            <img src="slide/2015-08-25-1440522598-1369540-Happypeoplemakemoremoney.jpg">
+                </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a class="thumbnail">
+                <p>Image 3</p>
+            <img src="slide/31488874-Cute-lovely-couple-on-the-beach-Stock-Photo-love.jpg">
+                </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <a class="thumbnail">
+                <p>Image 4</p>
+            <img src="slide/508441417.jpg">
+                </a>
+        </div>
+        </div>
+        <div class="row">
+            <h1>This Awesome<br><hr><small><mark>I love it</mark></small></h1>
+        </div>
+        <abbr title="United States of America">USA</abbr>
+            <hr>
+        <div class="list-group pull-right">
+            <a href="#" class="list-group-item list-group-item-danger">Home</a>
+            <a href="#" class="list-group-item list-group-item-success">About</a>
+            <a href="#" class="list-group-item list-group-item-warning">Contact</a>
+            <a href="http://google.com" class="list-group-item list-group-item-primary">Background<span class="badge">New</span></a>
+        </div>
+        <pre class="pre-scrollable">#include<iostream>
+#include<vector>
+using namespace std;
+const char encoder[5][5] = {{'A','B','C','D','E'},
+                      {'F','G','H','I','K'},
+                      {'L','M','N','O','P'},
+                      {'Q','R','S','T','U'},
+                      {'V','W','X','Y','Z'}};
+void input_string(vector<char>& a)
+{
+    char c;
+    while (1)
+    {
+        c=getchar();
+        if (c >= 97 && c <= 122)
+        c -= 32;
+        if (c == '\n')
+            break;
+        else if (c==' ')
+            continue;
+        else if (c == 'J')
+        a.push_back('I');
+        a.push_back(c);
+    }
+    return;
+}
+void get_pos(char p, int& r, int& c)
+{
+    if (p < 'J')
+    {
+        r = (p - 65) / 5;
+        c = (p - 65) % 5;
+    }
+    else if (p > 'J')
+    {
+        r = (p - 66) / 5;
+        c = (p - 66) % 5;
+    }
+    return;
+}
+void same_row(int r, vector<char>& code, int c1, int c2)
+{
+    code.push_back(encoder[r][(c1 + 4) % 5]);
+    code.push_back(encoder[r][(c2 + 4) % 5]);
+    return;
+}
+
+void same_column(int c, vector<char>& code, int r1, int r2)
+{
+    code.push_back(encoder[(r1 + 4) % 5][c]);
+    code.push_back(encoder[(r2 + 4) % 5][c]);
+    return;
+}
+void diff_col_row(int r1, int c1, vector<char>& code, int r2, int c2)
+{
+    code.push_back(encoder[r1][c2]);
+    code.push_back(encoder[r2][c1]);
+    return;
+}
+void encode(vector<char> msgx, int len)
+{
+    vector<char> code;
+    int i = 0, j = 0;
+    int r1, c1, r2, c2;
+    while (i < len)
+    {
+        get_pos(msgx[i], r1, c1);
+        i++;
+        get_pos(msgx[i], r2, c2);
+        if (r1 == r2)
+        {
+            same_row(r1, code, c1, c2);
+        }
+        else if (c1 == c2)
+        {
+            same_column(c1, code, r1, r2);
+        }
+        else
+        {
+            diff_col_row(r1, c1, code, r2, c2);
+        }
+        i++;
+    }
+    cout<<"THE DECRYPTED/ENCRYPTED MESSAGE WAS: "<<endl;
+    cout<<"-------------------------------------"<<endl;
+    for (j = 0;j < code.size();j++)
+    {
+        if (code[j] == 'X')
+        continue;
+        cout<<code[j];
+    }
+    return;
+}
+int main()
+{
+cout<<"\t\t\t******A PROGRAM TO ENCRYPT AND DECRYPT MESSAGES USING PLAYFAIR************\n";
+cout <<"\t\t\t\t***Developed By: Daniel Mweu********\n";
+cout <<"\t\t\t********jeremiah.mweu@gmail.com********\n";
+cout <<"\t\t\t*********************************************\n\n\n\n";
+cout <<"\t\tENTER THE PLAINTEXT/CIPHERTEXT MESSAGE AND PRESS ENTER TO CONTINUE"<<endl;
+cout <<"\t\t*********************************************************\n";
+vector<char> msg;
+std: cout<<"Enter the Plaintext/ciphertext Message Here: “;
+    input_string(msg);
+    int len=msg.size();
+</pre>
+<h3>Output</h3>
+<samp>Hello My People</samp>
+<kbd>CTRL</kbd>+<kbd>K</kbd>
+
+<table class="table table-bordered table-hover table-condensed table-striped">
+<thead>
+<tr>
+<th>Name</th>
+<th>Age</th>
+<th>Gender</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Daniel</td>
+<td>21</td>
+<td>Male</td>
+</tr>
+<tbody>
+<tr>
+<td>Kanana</td>
+<td>19</td>
+<td>Female</td>
+</tr>
+<tr>
+<td>David</td>
+<td>22</td>
+<td>Male</td>
+</tr>
+</tbody>
+</table>
+<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span>Search</button>
+
+
+
+        </div>
+        
+            
+            
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src= "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" ></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src= "js/bootstrap.min.js" ></script>
+</body>
+</html>
+ 

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang= "en" >
+<head>
+<meta charset= "utf-8" >
+<meta http-equiv= "X-UA-Compatible"
+content="IE=edge" >
+<meta name= "viewport"
+content="width=device-width, initial-scale=1" >
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title> Bootstrap 101 Template</title>
+<!-- Bootstrap -->
+<link href= "css/bootstrap.min.css"
+rel= "stylesheet" >
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container">
+   <h1 class="text-center text-primary" style="font-size:69px;text-shadow:inherit">My Gallery</h1>
+    <div class="row">
+       <div class="col-md-12">
+        <h1><small>My Image Gallery</small></h1>
+        </div>
+        
+        <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <a class="thumbnail">
+                <p>Image 1</p>
+                <img src="slide/black-couple-laughing-weekend.jpg">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <a class="thumbnail">
+                <p>Image 1</p>
+                <img src="slide/2015-08-25-1440522598-1369540-Happypeoplemakemoremoney.jpg">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <a class="thumbnail">
+                <p>Image 1</p>
+                <img src="slide/31488874-Cute-lovely-couple-on-the-beach-Stock-Photo-love.jpg">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <a class="thumbnail">
+                <p>Image 1</p>
+                <img src="slide/508441417.jpg">
+            </a>
+            </div>
+        </div>
+        
+         <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <a class="thumbnail">
+                <p>Image 1</p>
+                <img src="slide/Love-Romantic-Sort-Poem-You-are-mine-ever-and-forever-Cute-Couple-by-funnystatusforfacebook.in.jpg">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <a class="thumbnail">
+                <p>Image 1</p>
+                <img src="slide/jer.jpg">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <a class="thumbnail">
+                <p>Image 1</p>
+                <img src="slide/love-470a.jpg">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <a class="thumbnail">
+                <p>Image 1</p>
+                <img src="slide/index.jpg">
+            </a>
+            </div>
+        </div>
+        <table class="table table-hover table-bordered table-responsive table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Sex</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Daniel</td>
+                    <td>21</td>
+                    <td>Male</td>
+                </tr>
+                <tr>
+                    <td>Kanana</td>
+                    <td>19</td>
+                    <td>Female</td>
+                </tr>
+                <tr>
+                    <td>David</td>
+                    <td>22</td>
+                    <td>Male</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p class="text-in">It is a web-based site that gives people an opportunity intermingle and form a lifetime relationship. The user will be able to find other friends (mates) in the forum. One will be able to register; login and view profile .</p>
+                    </div>
+                    <div class="col-xs-12">
+                        <p class="text-primary">A user can give a feedback on how s/he has found the site. Users either can be browsers or registered users. Registered users have privilege to access certain sections of data. </p>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-9">
+                    <p class="text-danger">The production of this work would not have been complete without the assistance of certain personalities. I would like to thank our almighty for granting me His favor to undertake this project. I also give deserved recognition and thanks to my lecturer Mr. Kumar Anil for his direction and guidance throughout the development and production of this document.
+                    My sincere gratitude also to my fellow students, Computer Science Class (2014 group) for their encouragement and their support in the document writing. It is a web-based site that gives people an opportunity intermingle and form a lifetime relationship. The user will be able to find other friends (mates) in the forum. One will be able to register; login and view profile .The user can also find someone of his/her interest based on gender and age. The admin has the rights to add, edit and delete the contents of the site to give the user the desired needs. A user can give a feedback on how s/he has found the site. Users either can be browsers or registered users. Registered users have privilege to access certain sections of data. There is a standard procedure for user registration. The site is intended to serve for an institution.
+</p>
+                 </div>
+        </div>
+        
+        <pre class="pre-scrollable">#include <iostream>
+#include <string>
+#include <fstream>
+using namespace std;
+char caesar(char);
+int main ()
+{
+    ofstream outputFile, ciphertext;
+    outputFile.open ("plain.doc",ios::out|ios::app);
+	ciphertext.open ("cipher.doc",ios::out|ios::app);
+    string input, output;
+    string st;
+    cout<<"\n\n";
+    cout<<"\t\t\t******A PROGRAM TO ENCRYPT AND DECRYPT MESSAGES USING CAESAR CIPHER*******\n";
+    cout <<"\t\t\t\t***Developed By: Daniel J Mweu********\n";
+    cout <<"\t\t\t********jeremiah.mweu@gmail.com********\n";
+    cout <<"\t\t\t******************************************************\n\n\n\n";
+	cout <<"\t\tENTER OPERATION:ENCRYPT OR DECRYPT FOLLOWED BY THE TEXT TO BE ENCRYPTED/DECRYPED"<<endl;
+	cout <<"\t\t********************************************************************************\n";
+    cin>>st;
+    if(st=="encrypt")
+    {
+    do
+    {
+    getline(cin, input);
+    outputFile<<input<<endl;
+    cout <<"The Encrypted Message is :\n"<<output << endl;
+    string output = "";
+    for (int x = 0; x < input.length(); x++)
+    {
+    output += caesar(input[x]);
+    }
+    cout << input << endl;
+    ciphertext<< output<<endl;
+    cout<<"\n"<<endl;
+    cout<<"The above message has been send as ciphertext to the recipients.\n"<<endl;
+    cout<<"\t\t\t ENTER ANOTHER PLAINTEXT TO CONTINUE"<<endl;
+    cout<<"\t\t\t\t\t\tOR"<<endl;
+    cout<<"\t\t\t\tENTER A BLANK LINE TO QUIT"<<endl;
+    }
+    while (!input.length() == 0);
+    }
+    else
+	{
+    do
+    {
+    getline(cin, input);
+    outputFile<<input<<endl;
+    string output = "";
+    for (int x = 0; x < input.length(); x++)
+    {
+    output += caesar(input[x]);
+    } 
+    ciphertext<< output<<endl;
+    cout <<"The Encrypted Message was :\n\n"<<output << endl;
+    cout<<"\n"<<endl;
+    cout<<"\t\t\t\t ENTER ANOTHER CIPHERTEXT TO CONTINUE"<<endl;
+    cout<<"\t\t\t\t\t\t  OR"<<endl;
+    cout<<"\t\t\t\t\t ENTER A BLANK LINE TO QUIT"<<endl;
+    }
+    while (!input.length() == 0);
+} //end main
+}
+char caesar(char c)
+{
+    if (isalpha(c))
+    {
+    c = toupper(c); //use upper to keep from having to use two seperate for A..Z a..z
+    c = (((c - 65) + 13) % 26) + 65;
+    }
+    //if c isn't alpha, just send it back.
+    return c;
+}
+
+#include<iostream>
+#include<vector>
+using namespace std;
+const char encoder[5][5] = {{'A','B','C','D','E'},
+                      {'F','G','H','I','K'},
+                      {'L','M','N','O','P'},
+                      {'Q','R','S','T','U'},
+                      {'V','W','X','Y','Z'}};
+void input_string(vector<char>& a)
+{
+    char c;
+    while (1)
+    {
+        c=getchar();
+        if (c >= 97 && c <= 122)
+        c -= 32;
+        if (c == '\n')
+            break;
+        else if (c==' ')
+            continue;
+        else if (c == 'J')
+        a.push_back('I');
+        a.push_back(c);
+    }
+    return;
+}
+void get_pos(char p, int& r, int& c)
+{
+    if (p < 'J')
+    {
+        r = (p - 65) / 5;
+        c = (p - 65) % 5;
+    }
+    else if (p > 'J')
+    {
+        r = (p - 66) / 5;
+        c = (p - 66) % 5;
+    }
+    return;
+}
+void same_row(int r, vector<char>& code, int c1, int c2)
+{
+    code.push_back(encoder[r][(c1 + 4) % 5]);
+    code.push_back(encoder[r][(c2 + 4) % 5]);
+    return;
+}
+
+void same_column(int c, vector<char>& code, int r1, int r2)
+{
+    code.push_back(encoder[(r1 + 4) % 5][c]);
+    code.push_back(encoder[(r2 + 4) % 5][c]);
+    return;
+}
+void diff_col_row(int r1, int c1, vector<char>& code, int r2, int c2)
+{
+    code.push_back(encoder[r1][c2]);
+    code.push_back(encoder[r2][c1]);
+    return;
+}
+void encode(vector<char> msgx, int len)
+{
+    vector<char> code;
+    int i = 0, j = 0;
+    int r1, c1, r2, c2;
+    while (i < len)
+    {
+        get_pos(msgx[i], r1, c1);
+        i++;
+        get_pos(msgx[i], r2, c2);
+        if (r1 == r2)
+        {
+            same_row(r1, code, c1, c2);
+        }
+        else if (c1 == c2)
+        {
+            same_column(c1, code, r1, r2);
+        }
+        else
+        {
+            diff_col_row(r1, c1, code, r2, c2);
+        }
+        i++;
+    }
+    cout<<"THE DECRYPTED/ENCRYPTED MESSAGE WAS: "<<endl;
+    cout<<"-------------------------------------"<<endl;
+    for (j = 0;j < code.size();j++)
+    {
+        if (code[j] == 'X')
+        continue;
+        cout<<code[j];
+    }
+    return;
+}
+int main()
+{
+cout<<"\t\t\t******A PROGRAM TO ENCRYPT AND DECRYPT MESSAGES USING PLAYFAIR************\n";
+cout <<"\t\t\t\t***Developed By: Daniel Mweu********\n";
+cout <<"\t\t\t********jeremiah.mweu@gmail.com********\n";
+cout <<"\t\t\t*********************************************\n\n\n\n";
+cout <<"\t\tENTER THE PLAINTEXT/CIPHERTEXT MESSAGE AND PRESS ENTER TO CONTINUE"<<endl;
+cout <<"\t\t*********************************************************\n";
+vector<char> msg;
+std: cout<<"Enter the Plaintext/ciphertext Message Here: “;
+    input_string(msg);
+    int len=msg.size();
+    encode(msg,len);
+    return 0;
+}
+
+</pre>
+  <p>Output</p>
+   <samp>Hello World</samp>
+    <div class="dropdown">
+        <a class="data-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+    </div>
+    <blockquote class="blockquote-reverse">
+        <p>By failing to prepare you prepare to fail</p>
+        <footer>This quote was written by <cite title="Daniel J. Mweu">Daniel J. Mweu</cite></footer>
+    </blockquote>
+   
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src= "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" ></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src= "js/bootstrap.min.js" ></script>
+</body>
+</html>
